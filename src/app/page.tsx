@@ -29,7 +29,7 @@ export default function Home() {
         {/* エラーになる
         <ButtonWithLog onClick={onClickButton}>Button with Log</ButtonWithLog> */}
         <ButtonWithLog onClick={onClickButtonWithLog}>
-          Button with Log
+          Button With Log
         </ButtonWithLog>
       </div>
     </div>
