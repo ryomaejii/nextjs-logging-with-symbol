@@ -9,11 +9,17 @@ export default function Home() {
   const [count, setCount] = useState(0);
   const onClickButton: MouseEventHandler<HTMLButtonElement> = () => {
     setCount(count + 1);
+    console.log('Button clicked'); // 手動でログを出力する
   };
 
-  const onClickButtonWithLog = onClickWithLog(onClickButton, () => {
-    console.log('Button clicked');
-  });
+  const onClickButtonWithLog = onClickWithLog(
+    () => {
+      setCount(count + 1);
+    },
+    () => {
+      console.log('ButtonWithLog clicked');
+    }
+  );
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 gap-4">
